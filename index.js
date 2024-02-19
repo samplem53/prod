@@ -5,7 +5,7 @@ const app = require('./app')
 const connectDB = async () => {
     mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Connected to MongoDB"))
-    .catch((err) => console.log("MongoDB Connection Failed"));
+    .catch((err) => console.log("MongoDB Connection Failed", err));
 }
 
 const port = process.env.PORT || 3001;
